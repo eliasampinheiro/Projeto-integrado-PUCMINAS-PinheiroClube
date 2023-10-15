@@ -1,9 +1,13 @@
 package com.elias.club.model;
 
+import com.elias.club.utils.QRCodeGenerator;
+import com.google.zxing.WriterException;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Base64;
 
 @Entity
 @Getter
@@ -21,4 +25,11 @@ public class Boleto {
     private LocalDate dataEmissao;
     private LocalDate dataValidade;
     private Boolean statusPago;
+
+    public String criarBoleto() throws IOException, WriterException {
+        byte[] image = new byte[0];
+        image = QRCodeGenerator.getQRCodeImage(numeroDAR.toString(),250,250);
+        String qrcode = Base64.getEncoder().encodeToString(image);
+        return qrcode;
+    }
 }

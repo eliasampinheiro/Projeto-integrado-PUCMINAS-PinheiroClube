@@ -50,11 +50,24 @@
     margin-top: 20px;
 }
 .btn-primary {
-    position: absolute;
-    margin-top: 20px;
-    left: 50%;
+    position: relative;
+    margin: 20px;
+    width: 120px;
 }
 .adm{
     background-color: var(--cinza-principal);
+}
+.left{
+    position: absolute;
+    left: 500px;
+    margin: 20px;
+}
+.right{
+    position: absolute;
+    right: 500px;
+    margin: 20px;
+}
+.dados-usuario{
+    height: 50px;
 }
 

@@ -1,5 +1,6 @@
 package com.elias.club.model.service;
 
+import com.elias.club.model.Boleto;
 import com.elias.club.model.Usuario;
 import com.elias.club.model.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
@@ -28,5 +29,9 @@ public class UsuarioService {
 
     public List<Usuario> findAll(){
         return usuarioRepository.findAll();
+    }
+
+    public Usuario findByCpf(String cpf) {
+        return usuarioRepository.findByCpf(cpf);
     }
 }

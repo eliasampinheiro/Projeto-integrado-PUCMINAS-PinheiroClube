@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,39 @@
   <title>Solicitar Carteira</title>
 </head>
 <body class="adm">
-
+      <div class="center">
+        <img width="200px" height="200px" th:src="@{/images/logo.png}"  alt="Logo do Pinheiro Clube">
+      </div>
+      <section>
+        <h1 class="center"><strong>Solicitar nova carteira</strong></h1>
+        <a class="center" href="/">confira os dados que serão emitidos na carteira</a>
+        <div class="dados-usuario">
+          <h6 class="left">NOME</h6>
+          <h6 class="right">DATA DE NASCIMENTO</h6>
+        </div>
+        <div class="dados-usuario">
+          <h7 class="left"><span th:text="${nome}"></span></h7>
+          <h7 class="right"><span th:text="${dataNascimento}"></span></h7>
+        </div>
+        <div class="dados-usuario">
+          <h6 class="left">CPF</h6>
+          <h6 class="right">EMAIL</h6>
+        </div>
+        <div class="dados-usuario">
+          <h7 class="left"><span th:text="${cpf}"></span></h7>
+          <h7 class="right"><span th:text="${email}"></span></h7>
+        </div>
+      </section>
+<section>
 <div class="center">
-  <img width="200px" height="200px" th:src="@{/images/logo.png}"  alt="Logo do Pinheiro Clube">
+  <form method="GET" action="/gerarBoleto">
+    <button type="submit" class="btn btn-secondary">confirmar</button>
+  </form>
+  <form method="GET" action="/sistemaUsuario">
+    <button type="submit" class="btn btn-secondary">menu</button>
+  </form>
+
 </div>
-<h1 class="center"><strong>Solicitar nova carteira</strong></h1>
-<a class="center" href="/">confira os dados que serão emitidos na carteira</a>
-
-
-<div class="center">
-  <button type="submit" class="btn btn-secondary">confirmar</button>
-  <button type="submit" class="btn btn-secondary">menu</button>
-</div>
-
+</section>
 </body>
 </html>

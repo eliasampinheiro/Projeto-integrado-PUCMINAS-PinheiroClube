@@ -16,7 +16,8 @@
 
 <section class="form">
     <h1 class="center"><strong>Suspender/Liberar carteiras</strong></h1>
-    <a class="center" href="/">Confira os dados que serão emitidos na carteira</a>
+    <h3>Confira os dados que serão emitidos na carteira</h3>
+
     <form class="form-dados" method="POST" action="/liberar">
         <div class="form-group">
             <label class="label" for="cpf">CPF:</label>
@@ -26,8 +27,13 @@
             <label class="label" for="nome">NOME COMPLETO DO USUARIO:</label>
             <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite nome completo">
         </div>
-        <button type="submit" class="btn btn-primary">Cadastro</button>
+    <div class="center">
+        <button type="submit" class="btn btn-primary">Suspender</button>
+            <button type="submit" class="btn btn-primary">Liberar</button>
+        <button type="submit" class="btn btn-primary">Menu</button>
+    </div>
     </form>
+
 
 
 </section>

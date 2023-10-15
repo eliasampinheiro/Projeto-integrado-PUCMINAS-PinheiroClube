@@ -4,6 +4,7 @@ package com.elias.club.model;
 import com.elias.club.model.dto.UsuarioCadastroDto;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.engine.internal.Cascade;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,9 +27,11 @@ public class Usuario {
     private String cpf;
     private LocalDate dataNascimento;
     private String password;
-    private Tipo tipo = Tipo.USUARIO;
-    @OneToOne
+    private Tipo tipo;
+    @OneToOne(cascade = CascadeType.ALL )
     private Carteira carteira;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Boleto boleto;
     public Usuario(UsuarioCadastroDto usuarioCadastroDto){
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.name=usuarioCadastroDto.nome();
