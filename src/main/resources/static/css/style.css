@@ -1,0 +1,73 @@
+
+:root{
+    --cinza-principal:#545454;
+    --cinza-campo:#D4CCCC;
+    --cinza-botao:#8F8E8E;
+    --fonte-amarela:#E8D529;
+    --fonte-branco:#FFFFFF;
+    --fonte-preta:#000000;
+    --fonte-verde:#2D7D1C;
+    --fonte-vermelho:#E80202;
+    --fonte-logo:'Kanit', sans-serif;
+    --fonte-login: 'DM Sans', sans-serif;
+    --fonte-menu: 'Open Sans', sans-serif;
+    --fonte-botao-login: 'Poppins', sans-serif
+}
+
+.login-logo{
+    float: left;
+    width: 600px;
+    height: 800px;
+    background-color: var(--cinza-principal);
+    margin-right: 100px;
+}
+.form-control{
+    border-radius: 20px;
+}
+
+.form{
+    margin-top: 50px;
+    position: relative;
+    float: left;
+    width: 600px;
+}
+.center {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.btn-secondary{
+    position: relative;
+    margin: 10px;
+    width: 300px;
+}
+
+.form-dados{
+    margin-top: 100px;
+}
+.label{
+    margin-top: 20px;
+}
+.btn-primary {
+    position: relative;
+    margin: 20px;
+    width: 120px;
+}
+.adm{
+    background-color: var(--cinza-principal);
+}
+.left{
+    position: absolute;
+    left: 500px;
+    margin: 20px;
+}
+.right{
+    position: absolute;
+    right: 500px;
+    margin: 20px;
+}
+.dados-usuario{
+    height: 50px;
+}
+

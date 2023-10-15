@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    volumes:
+      - /tmp/mariadb:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: p@ssw0rd
+      MARIADB_DATABASE: eliasclub
+      MARIADB_USER: developer
+      MARIADB_PASSWORD: 123456
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080
